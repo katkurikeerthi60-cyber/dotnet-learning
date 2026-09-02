@@ -1,0 +1,20 @@
+# .NET build output
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Secrets
+secrets.json
+.env
+.env.*
+
+# Local configuration
+appsettings.*.local.json
+
+# OS files
+.DS_Store
+Thumbs.db
