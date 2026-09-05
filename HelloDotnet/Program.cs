@@ -1,25 +1,34 @@
-﻿static void Swap(ref int a, ref int b)
+﻿string paragraph = "C# is powerful. C# is simple. C# is powerful and simple.";
+
+string[] words = paragraph
+    .ToLower()
+    .Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+List<string> wordList = new List<string>(words);
+HashSet<string> uniqueWords = new HashSet<string>(words);
+
+Console.WriteLine($"Total words: {wordList.Count}");
+Console.WriteLine($"Unique words: {uniqueWords.Count}");
+
+Dictionary<string, int> wordCounts = new Dictionary<string, int>();
+
+foreach (string word in words)
 {
-    int temp = a;
-    a = b;
-    b = temp;
+    string cleanWord = word.Trim('.', ',', '!', '?', ';', ':');
+
+    if (wordCounts.ContainsKey(cleanWord))
+    {
+        wordCounts[cleanWord]++;
+    }
+    else
+    {
+        wordCounts[cleanWord] = 1;
+    }
 }
 
-static (int sum, int difference) Calculate(int a, int b)
+Console.WriteLine("\nWord Counts - Descending:");
+
+foreach (var item in wordCounts.OrderByDescending(x => x.Value))
 {
-    return (a + b, a - b);
+    Console.WriteLine($"{item.Key} = {item.Value}");
 }
-
-int x = 10;
-int y = 20;
-
-Console.WriteLine($"Before swap: x = {x}, y = {y}");
-
-Swap(ref x, ref y);
-
-Console.WriteLine($"After swap: x = {x}, y = {y}");
-
-var (sum, difference) = Calculate(30, 10);
-
-Console.WriteLine($"Sum = {sum}");
-Console.WriteLine($"Difference = {difference}");
