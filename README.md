@@ -9,3 +9,5 @@ This repository contains my C# and .NET learning exercises.
 - Module 2 — Object-Oriented Programming
 - Module 3 — .NET Core Concepts
 - Module 4 — Configuration, Secrets & Logging
+
+I am learning C# and .NET with Git and GitHub.
