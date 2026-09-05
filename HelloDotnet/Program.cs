@@ -1,2 +1,19 @@
-﻿Console.WriteLine("My name is Keerthi.");
-Console.WriteLine("I am learning C# and .NET programming for my career.");
+﻿for (int i = 1; i <= 30; i++)
+{
+    if (i % 3 == 0 && i % 5 == 0)
+    {
+        Console.WriteLine("FizzBuzz");
+    }
+    else if (i % 3 == 0)
+    {
+        Console.WriteLine("Fizz");
+    }
+    else if (i % 5 == 0)
+    {
+        Console.WriteLine("Buzz");
+    }
+    else
+    {
+        Console.WriteLine(i);
+    }
+}
