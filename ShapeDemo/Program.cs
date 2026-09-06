@@ -5,7 +5,8 @@ List<IShape> shapes = new List<IShape>
 {
     new Circle(5),
     new Rectangle(10, 5),
-    new Triangle(3, 4, 5)
+    new Triangle(3, 4, 5),
+    new Pentagon(6)
 };
 
 foreach (IShape shape in shapes)
@@ -16,7 +17,6 @@ foreach (IShape shape in shapes)
     Console.WriteLine();
 }
 
-// Interface
 public interface IShape
 {
     string Name { get; }
@@ -24,7 +24,6 @@ public interface IShape
     double CalculatePerimeter();
 }
 
-// Abstract base class
 public abstract class Shape : IShape
 {
     public string Name { get; protected set; }
@@ -42,7 +41,6 @@ public abstract class Shape : IShape
     }
 }
 
-// Circle
 public sealed class Circle : Shape
 {
     private double Radius { get; }
@@ -63,7 +61,6 @@ public sealed class Circle : Shape
     }
 }
 
-// Rectangle
 public class Rectangle : Shape
 {
     private double Length { get; }
@@ -86,7 +83,6 @@ public class Rectangle : Shape
     }
 }
 
-// Triangle
 public class Triangle : Shape
 {
     private double A { get; }
@@ -112,5 +108,25 @@ public class Triangle : Shape
     public override double CalculatePerimeter()
     {
         return A + B + C;
+    }
+}
+
+public class Pentagon : Shape
+{
+    private double Side { get; }
+
+    public Pentagon(double side) : base("Pentagon")
+    {
+        Side = side;
+    }
+
+    public override double CalculateArea()
+    {
+        return (Math.Sqrt(25 + 10 * Math.Sqrt(5)) * Side * Side) / 4;
+    }
+
+    public override double CalculatePerimeter()
+    {
+        return 5 * Side;
     }
 }
