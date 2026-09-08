@@ -1,0 +1,42 @@
+[
+  {
+    "Name": "Ravi",
+    "Department": "IT",
+    "Salary": 95000
+  },
+  {
+    "Name": "Priya",
+    "Department": "HR",
+    "Salary": 60000
+  },
+  {
+    "Name": "Arun",
+    "Department": "IT",
+    "Salary": 85000
+  },
+  {
+    "Name": "Sneha",
+    "Department": "Finance",
+    "Salary": 75000
+  },
+  {
+    "Name": "Kiran",
+    "Department": "HR",
+    "Salary": 55000
+  },
+  {
+    "Name": "Anjali",
+    "Department": "IT",
+    "Salary": 90000
+  },
+  {
+    "Name": "Rahul",
+    "Department": "Finance",
+    "Salary": 65000
+  },
+  {
+    "Name": "Divya",
+    "Department": "Finance",
+    "Salary": 70000
+  }
+]
